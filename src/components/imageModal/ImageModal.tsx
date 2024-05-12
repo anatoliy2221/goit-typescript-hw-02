@@ -20,7 +20,7 @@ const customStyles = {
 Modal.setAppElement("#root");
 
 interface imageModalProps {
-  image: Image;
+  image: Image | null;
   modalIsOpen: boolean;
   closeModal: () => void;
 }
@@ -30,7 +30,7 @@ const ImageModal: FC<imageModalProps> = ({
   modalIsOpen,
   closeModal,
 }) => {
-  if (!image) {
+  if (image === null) {
     return null;
   }
   const { urls, alt, likes, user } = image;

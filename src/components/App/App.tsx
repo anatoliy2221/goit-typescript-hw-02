@@ -62,9 +62,11 @@ const App = () => {
     setPage((prevPage) => prevPage + 1);
   };
 
-  const openModal = (photo: Image): void => {
-    setSelectedImage(photo);
-    setShowModal(true);
+  const openModal = (photo: Image | null): void => {
+    if (photo !== null) {
+      setSelectedImage(photo);
+      setShowModal(true);
+    }
   };
 
   const closeModal = (): void => {
