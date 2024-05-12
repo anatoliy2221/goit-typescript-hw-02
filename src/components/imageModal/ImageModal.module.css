@@ -1,0 +1,23 @@
+.img {
+    max-width: 800px;
+    max-height: 600px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+}
+
+.contentWrap {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.text {
+    display: inline-block;
+    flex-direction: column;
+    width: calc((100% - 60px) / 3);
+    text-align: center;
+}
