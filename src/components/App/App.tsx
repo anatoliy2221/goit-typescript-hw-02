@@ -30,7 +30,7 @@ const App = () => {
     const fetchData = async (): Promise<void> => {
       setIsLoading(true);
       try {
-        const { results, total_pages }: Results = await fetchImages(
+        const { results, total_pages }: Results = await fetchImages<Results>(
           query,
           page
         );

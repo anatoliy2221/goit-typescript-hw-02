@@ -17,6 +17,7 @@ const ImageCard: FC<ImageCardProps> = ({ image, openModal }) => {
       <img
         src={urls.small}
         alt={alt_description}
+        className={css.card}
         onClick={() => openModal(image)}
       />
     </div>

@@ -8,9 +8,9 @@ interface searchBarprops {
 }
 
 const SearchBar: React.FC<searchBarprops> = ({ onSubmit }) => {
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState<string>("");
 
-  const handleChange = (evt: ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (evt: ChangeEvent<HTMLInputElement>): void => {
     setQuery(evt.target.value);
   };
 

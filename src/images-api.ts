@@ -12,7 +12,7 @@ export const fetchImages = async <T>(
   query: string,
   page: number
 ): Promise<T> => {
-  const { data } = await axios.get(
+  const { data } = await axios.get<T>(
     `search/photos/?query=${query}&page=${page}`
   );
 
